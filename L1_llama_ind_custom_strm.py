@@ -30,6 +30,6 @@ else:
     storage_context = StorageContext.from_defaults(persist_dir=PERSIST_DIR)
     index = load_index_from_storage(storage_context)
 
-query_engine = index.as_query_engine(response_mode="tree_summarize")
+query_engine = index.as_query_engine(streaming=True)
 response = query_engine.query("What did the author do growing up?")
-print(response)
+response.print_response_stream()
