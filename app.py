@@ -16,7 +16,7 @@ import sys
 logging.basicConfig(stream=sys.stdout, level=logging.DEBUG)
 logging.getLogger().addHandler(logging.StreamHandler(stream=sys.stdout))
 
-api_key = st.sidebar._text_input("OPEN API KEY", "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")
+api_key = st.sidebar._text_input("OPEN API KEY", )
 
 def save_api_key(api_key):
     # Set the environment variable
